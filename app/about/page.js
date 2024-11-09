@@ -18,7 +18,7 @@ export default function Page() {
           <p>
             Discover the charm, simplicity, and authenticity of rural retreats
             with VillageNest. Our platform connects you with a carefully curated
-            selection of unique cottages, rustic cabins, and charming country
+            selection of unique cottages, rustic nests, and charming country
             homes nestled in scenic rural areas, providing you with a chance to
             escape the everyday and fully immerse yourself in the beauty of
             nature.
