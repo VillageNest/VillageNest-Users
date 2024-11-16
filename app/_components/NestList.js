@@ -7,7 +7,6 @@ async function NestList({ filter }) {
   // noStore();
 
   const nests = await getNests();
-
   if (!nests.length) return null;
 
   let displayedNests;

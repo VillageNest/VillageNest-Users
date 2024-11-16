@@ -1,9 +1,12 @@
 import { Suspense } from "react";
 import NestList from "../_components/NestList";
 import Spinner from "../_components/Spinner";
+import Counter from "../_components/Counter";
 import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
 
 export const revalidate = 3600;
+// export const revalidate = 15;
 
 export const metadata = {
   title: "Nests",
@@ -32,6 +35,7 @@ export default function Page({ searchParams }) {
 
       <Suspense fallback={<Spinner />} key={filter}>
         <NestList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );

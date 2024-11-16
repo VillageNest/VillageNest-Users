@@ -3,7 +3,8 @@ import Link from "next/link";
 import { UsersIcon } from "@heroicons/react/24/solid";
 
 function NestCard({ nest }) {
-  const { id, name, maxCapacity, regularPrice, discount, image } = nest;
+  const { id, name, maxCapacity, regularPrice, discount, image, location } =
+    nest;
 
   return (
     <div className="flex border-primary-800 border">
@@ -40,7 +41,7 @@ function NestCard({ nest }) {
                 </span>
               </>
             ) : (
-              <span className="text-3xl font-[350]">₴{regularPrice}</span>
+              <span className="text-3xl font-[350]"> ₴{regularPrice}</span>
             )}
             <span className="text-primary-200">/ night</span>
           </p>

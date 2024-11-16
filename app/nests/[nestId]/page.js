@@ -1,17 +1,14 @@
 import Nest from "@/app/_components/Nest";
-
+import Reservation from "@/app/_components/Reservation";
 import Spinner from "@/app/_components/Spinner";
 import { getNest, getNests } from "@/app/_lib/data-service";
 
+import Image from "next/image";
 import { Suspense } from "react";
-
-// export const metadata = {
-//   title: "Nest",
-// };
 
 export async function generateMetadata({ params }) {
   const { name } = await getNest(params.nestId);
-  return { title: `Nest ${name}` };
+  return { title: `${name}` };
 }
 
 export async function generateStaticParams() {
@@ -34,7 +31,9 @@ export default async function Page({ params }) {
           Reserve {nest.name} today. Pay on arrival.
         </h2>
 
-        <Suspense fallback={<Spinner />}></Suspense>
+        <Suspense fallback={<Spinner />}>
+          <Reservation nest={nest} />
+        </Suspense>
       </div>
     </div>
   );
